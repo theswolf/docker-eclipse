@@ -36,6 +36,9 @@ RUN chmod +x /usr/local/bin/eclipse && \
     chown developer:developer -R /home/developer && \
     chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
 
+COPY lombok.jar /opt/eclipse
+RUN echo '-javaagent:/opt/eclipse/lombok.jar' >> /opt/eclipse/eclipse.ini
+
 USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer
