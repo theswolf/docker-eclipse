@@ -39,7 +39,7 @@ RUN chmod +x /usr/local/bin/eclipse && \
 COPY lombok.jar /opt/eclipse
 RUN echo '-javaagent:/opt/eclipse/lombok.jar' >> /opt/eclipse/eclipse.ini
 
-RUN apt-get update && apt-get install -y meld && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y meld zip && rm -rf /var/lib/apt/lists/*
 
 USER developer
 ENV HOME /home/developer
