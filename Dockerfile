@@ -16,7 +16,9 @@ RUN  apt-get update && apt-get install -y software-properties-common && \
 # the netbeans image
 RUN apt-get update && apt-get install -y libgtk2.0-0 libcanberra-gtk-module
 
-ARG ECLIPSE_LINK="http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/3/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz"
+#ARG ECLIPSE_LINK="http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/3/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz"
+ARG ECLIPSE_LINK="http://mirror.onet.pl/pub/mirrors/eclipse//technology/epp/downloads/release/oxygen/1a/eclipse-jee-oxygen-1a-linux-gtk-x86_64.tar.gz"
+
 
 RUN wget $ECLIPSE_LINK -O /tmp/eclipse.tar.gz -q && \
     echo 'Installing eclipse' && \
