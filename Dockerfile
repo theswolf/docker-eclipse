@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:9
 MAINTAINER Chris Geymo "chris.geymo@gmail.com"
 
 #RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
